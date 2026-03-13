@@ -1,1 +1,99 @@
 
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { 
+    background-color: #000; 
+    color: #E1E1E1; 
+    font-family: 'Junge', serif; 
+    overflow-x: hidden; 
+}
+
+.background-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: url('https://res.cloudinary.com/dqoncufhc/image/upload/v1773395985/afa687e2-22be-4daf-85e3-58390cdae362_giajow.png') no-repeat center center fixed;
+    background-size: cover; z-index: -2;
+}
+
+/* --- HEADER --- */
+.header-main { 
+    width: 100%; 
+    padding: 60px 20px 30px 20px; 
+    text-align: center; 
+}
+
+.header-main h1 { 
+    font-family: 'Junge', serif !important; 
+    font-size: 1.4rem !important; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    color: #fffafa; 
+    /* RIPRISTINO OMBRA FORTE */
+    text-shadow: 2px 2px 4px #808080, 0 0 10px #ffffff;
+    display: block; 
+    line-height: 1.2; 
+    margin-bottom: 15px; 
+}
+
+.header-main .subtitle { 
+    font-family: 'Junge', cursive !important; 
+    font-size: 1.1rem !important; 
+    letter-spacing: 1px; 
+    color: #00ffff; 
+    /* RIPRISTINO OMBRA ORIGINALE */
+    text-shadow: 2px 2px 4px #ffffff, 0 0 8px rgba(0, 255, 255, 0.6); 
+    font-weight: bold; 
+    display: block; 
+}
+
+/* --- CONTENUTI --- */
+.container-verticale { display: flex; flex-direction: column; align-items: center; position: relative; z-index: 1; width: 100%; }
+
+.slide { 
+    width: 90%; max-width: 450px; margin-bottom: 70px; 
+    background: rgba(0, 0, 0, 0.4) !important; 
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 255, 255, 0.3); 
+    display: block;
+}
+
+.descrizione-box { padding: 30px 25px; text-align: center; width: 100%; }
+
+.testo-blu-notte { 
+    font-family: 'Junge', cursive !important; 
+    font-size: 1.3rem; 
+    color: #00ffff; 
+    /* RIPRISTINO OMBRA PROFONDA */
+    text-shadow: 2px 2px 4px #808080, 0 0 10px rgba(0, 255, 255, 0.5); 
+    font-weight: bold; 
+    display: block; 
+    margin-bottom: 25px; 
+}
+
+.testo-scorrevole { 
+    font-family: 'EB Garamond', serif; 
+    height: 300px; 
+    overflow-y: auto; 
+    text-align: center; 
+    font-size: 0.95rem; 
+    line-height: 1.8; 
+    color: #E1E1E1 !important; 
+    padding: 0 15px; 
+    white-space: pre-wrap; 
+}
+
+.testo-scorrevole::-webkit-scrollbar { width: 1px; }
+.testo-scorrevole::-webkit-scrollbar-thumb { background: #00ffff; }
+
+/* --- AUDIO --- */
+.audio-bar-container {
+    position: fixed; bottom: 20px; right: 20px; z-index: 1002; 
+    background: rgba(0,0,0,0.85); border: 1px solid #00ffff; border-radius: 50%;
+    width: 45px; height: 45px; display: flex; align-items: center; justify-content: center;
+    /* RIPRISTINO GLOW ORIGINALE */
+    box-shadow: 0 0 10px #00ffff;
+}
+#seek-slider, #time-display { display: none !important; }
+#audio-btn { background: none; border: none; color: #00ffff; cursor: pointer; font-size: 1.3rem; }
+
+@media (max-width: 600px) {
+    .slide { width: 95%; }
+}
