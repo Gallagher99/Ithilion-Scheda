@@ -7,14 +7,12 @@ body {
 }
 
 .background-overlay {
-    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    /* Sostituito cover con 100% auto per eliminare lo schiacciamento */
-    background: #000 url('https://res.cloudinary.com/dqoncufhc/image/upload/v1773395985/afa687e2-22be-4daf-85e3-58390cdae362_giajow.png') no-repeat center top fixed;
-    background-size: 100% auto; 
+    position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+    background: #000 url('https://res.cloudinary.com/dqoncufhc/image/upload/v1773395985/afa687e2-22be-4daf-85e3-58390cdae362_giajow.png') no-repeat center center fixed;
+    background-size: cover; 
     z-index: -2;
 }
 
-/* --- HEADER --- */
 .header-main { 
     width: 100%; 
     padding: 60px 20px 30px 20px; 
@@ -27,7 +25,6 @@ body {
     text-transform: uppercase; 
     letter-spacing: 2px; 
     color: #fffafa; 
-    /* RIPRISTINO OMBRA FORTE */
     text-shadow: 2px 2px 4px #808080, 0 0 10px #ffffff;
     display: block; 
     line-height: 1.2; 
@@ -39,13 +36,11 @@ body {
     font-size: 1.1rem !important; 
     letter-spacing: 1px; 
     color: #00ffff; 
-    /* RIPRISTINO OMBRA ORIGINALE */
     text-shadow: 2px 2px 4px #ffffff, 0 0 8px rgba(0, 255, 255, 0.6); 
     font-weight: bold; 
     display: block; 
 }
 
-/* --- CONTENUTI --- */
 .container-verticale { display: flex; flex-direction: column; align-items: center; position: relative; z-index: 1; width: 100%; }
 
 .slide { 
@@ -62,7 +57,6 @@ body {
     font-family: 'Junge', cursive !important; 
     font-size: 1.3rem; 
     color: #00ffff; 
-    /* RIPRISTINO OMBRA PROFONDA */
     text-shadow: 2px 2px 4px #808080, 0 0 10px rgba(0, 255, 255, 0.5); 
     font-weight: bold; 
     display: block; 
@@ -84,12 +78,10 @@ body {
 .testo-scorrevole::-webkit-scrollbar { width: 1px; }
 .testo-scorrevole::-webkit-scrollbar-thumb { background: #00ffff; }
 
-/* --- AUDIO --- */
 .audio-bar-container {
     position: fixed; bottom: 20px; right: 20px; z-index: 1002; 
     background: rgba(0,0,0,0.85); border: 1px solid #00ffff; border-radius: 50%;
     width: 45px; height: 45px; display: flex; align-items: center; justify-content: center;
-    /* RIPRISTINO GLOW ORIGINALE */
     box-shadow: 0 0 10px #00ffff;
 }
 #seek-slider, #time-display { display: none !important; }
